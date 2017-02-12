@@ -22,7 +22,7 @@ From this point on, it's irrelevant that we just used CMake to build Versor. Ver
 could have been built using any build system (Make, Bazel, etc). *All we care about
 now is the location of the built static archives and the include directories.*
 
-With Versor now build, you can compile the example Versor app using CMake:
+With Versor now built, you can compile the example Versor app using CMake:
 
     mkdir build
     cd build
