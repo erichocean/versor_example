@@ -1,9 +1,13 @@
-If you haven't already, install `glew`:
+Before you go futher, if you haven't already, install `glew`:
 
     brew install glew
 
-To use the Versor library an an external project, clone this repository, then:
+# Usage
 
+To use the Versor library as an external project with CMake, clone this repository,
+then build Versor as follows:
+
+    git clone https://github.com/erichocean/versor_example.git
     cd versor_example
     git clone https://github.com/wolftype/versor.git
     cd versor
@@ -11,7 +15,11 @@ To use the Versor library an an external project, clone this repository, then:
     ./build.sh
     cd ..
 
-Now that `versor` is built, you can compile the example:
+From this point on, it's irrelevant that we just used CMake to build Versor. Versor
+could have been built using any build system (Make, Bazel, etc). *All we care about
+now is the location of the built static archives and the include directories.*
+
+Now you can compile the example Versor app using CMake:
 
     mkdir build
     cd build
@@ -19,8 +27,9 @@ Now that `versor` is built, you can compile the example:
     make
     ./example
 
-The "trick" is just to set up CMake correctly with an external project. If
-you look in the top-level `CMakeLists.txt` file, you can see how I did that.
-There are other ways to do this, but I find this is the easiest.
+To repeat, the "trick" is just to set up the new CMake correctly with the location of
+the external libraries/includes. If you look in the top-level `CMakeLists.txt` file,
+you can see how I did that. There are other ways to link an external library with CMake,
+but I find this is the easiest.
 
 Best, Erich
