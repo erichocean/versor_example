@@ -1,4 +1,4 @@
-Before you go futher, if you haven't already, install `glew`:
+Before you go further, if you haven't already, install `glew`:
 
     brew install glew
 
